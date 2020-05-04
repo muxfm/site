@@ -21,5 +21,50 @@
   "homepage": "https://github.com/bulwarkfm/staart-static#readme",
   "dependencies": {
     "@staart/site": "^3.0.0-beta.1"
+  },
+  "@staart/site": {
+    "title": "Cofuturology",
+    "listSubpages": true,
+    "ignoreHomeSubpages": true,
+    "theme": {
+      "headerBackgroundColor": "#ffe600",
+      "headerTextColor": "#000000",
+      "textColor": "#372500",
+      "linkColor": "#000000",
+      "buttonBackgroundColor": "#8e44ad",
+      "buttonBackgroundColorLight": "#f1c40f",
+      "buttonTextColor": "#ffffff",
+      "doodleFillColor": "#8e44ad"
+    },
+    "navbar": [
+      "<a href='/episodes'>Episodes</a>",
+      "<a href='/listen'>How to Listen</a>"
+    ],
+    "preFooter": [
+      {
+        "type": "message",
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/github.svg",
+        "title": "An open source podcast",
+        "text": "This website, podcast episodes, show notes, and our branding are all available on <a href='#'>GitHub</a>."
+      },
+      {
+        "type": "message",
+        "style": {
+          "background-color": "var(--headerBackgroundColor)",
+          "color": "var(--headerTextColor)",
+          "padding": "5vh 0 10vh 0"
+        },
+        "illustration": "dancing",
+        "title": "Cofuturology is available wherever you listen to podcasts.",
+        "ctaText": "Listen now →",
+        "ctaLink": "#"
+      }
+    ],
+    "footer": {
+      "text": "Hosted by Dr. Jeffrey White and Anand Chowdhary",
+      "links": [
+        "<a href='https://github.com/AnandChowdhary/cofuturology'>GitHub</a>"
+      ]
+    }
   }
 }

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "@staart/site build",
-    "watch": "@staart/site watch",
-    "serve": "@staart/site serve",
+    "build": "site build",
+    "watch": "site watch",
+    "serve": "site serve",
     "start": "npm run serve"
   },
   "repository": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/bulwarkfm/staart-static/issues"
   },
-  "homepage": "https://github.com/bulwarkfm/staart-static#readme"
+  "homepage": "https://github.com/bulwarkfm/staart-static#readme",
+  "dependencies": {
+    "@staart/site": "^3.0.0-beta.1"
+  }
 }

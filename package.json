@@ -2,7 +2,12 @@
   "name": "bulwark-static",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "build": "@staart/site build",
+    "watch": "@staart/site watch",
+    "serve": "@staart/site serve",
+    "start": "npm run serve"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bulwarkfm/staart-static.git"

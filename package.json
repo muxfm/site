@@ -1,0 +1,17 @@
+{
+  "name": "bulwark-static",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bulwarkfm/staart-static.git"
+  },
+  "keywords": [],
+  "author": "Anand Chowdhary <mail@anandchowdhary.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bulwarkfm/staart-static/issues"
+  },
+  "homepage": "https://github.com/bulwarkfm/staart-static#readme"
+}

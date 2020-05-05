@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/bulwarkfm/staart-static#readme",
   "dependencies": {
-    "@staart/site": "^3.0.0-beta.5"
+    "@staart/site": "^3.0.0-beta.6"
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0",

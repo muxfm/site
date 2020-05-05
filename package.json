@@ -1,12 +1,17 @@
 {
   "name": "bulwark-static",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate your podcast's static site",
   "scripts": {
-    "build": "site build",
-    "watch": "site watch",
-    "serve": "site serve",
-    "start": "npm run serve"
+    "setup": "npx ts-node scripts/setup.ts",
+    "build": "echo 'Run `npm run setup` first'",
+    "watch": "echo 'Run `npm run setup` first'",
+    "serve": "echo 'Run `npm run setup` first'",
+    "start": "echo 'Run `npm run setup` first'",
+    "_build": "site build",
+    "_watch": "site watch",
+    "_serve": "site serve",
+    "_start": "npm run serve"
   },
   "repository": {
     "type": "git",
@@ -43,12 +48,6 @@
     "preFooter": [
       {
         "type": "message",
-        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/github.svg",
-        "title": "An open source podcast",
-        "text": "This website, podcast episodes, show notes, and our branding are all available on <a href='#'>GitHub</a>."
-      },
-      {
-        "type": "message",
         "style": {
           "background-color": "var(--headerBackgroundColor)",
           "color": "var(--headerTextColor)",
@@ -63,7 +62,9 @@
     "footer": {
       "text": "Hosted by Dr. Jeffrey White and Anand Chowdhary",
       "links": [
-        "<a href='https://github.com/AnandChowdhary/cofuturology'>GitHub</a>"
+        "<a href='https://github.com/AnandChowdhary/cofuturology'>GitHub</a>",
+        "<a href='https://github.com/AnandChowdhary/cofuturology'>RSS</a>",
+        "<a href='https://github.com/AnandChowdhary/cofuturology'>JSON</a>"
       ]
     }
   }

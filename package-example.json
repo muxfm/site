@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Generate your podcast's static site",
   "scripts": {
-    "setup": "npx ts-node scripts/setup.ts",
-    "build": "echo 'Run `npm run setup` first'",
-    "watch": "echo 'Run `npm run setup` first'",
-    "serve": "echo 'Run `npm run setup` first'",
-    "start": "echo 'Run `npm run setup` first'"
+    "build": "site build",
+    "watch": "site watch",
+    "serve": "site serve",
+    "start": "npm run serve"
   },
   "repository": {
     "type": "git",

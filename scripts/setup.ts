@@ -31,7 +31,19 @@ const setup = async () => {
   const pkg: any = JSON.parse(
     (await fs.readFile(join(".", "package.json"))).toString()
   );
-  await fs.writeFile(join(".", "package-example.json"), pkg);
+  pkg.scripts = pkg.scripts || {};
+  delete pkg.scripts.setup;
+  pkg.scripts.build = "site build";
+  pkg.scripts.watch = "site watch";
+  pkg.scripts.serve = "site serve";
+  pkg.scripts.start = "npm run serve";
+  await fs.writeFile(
+    join(".", "package-example.json"),
+    JSON.stringify(pkg, null, 2)
+  );
+  console.log(
+    "Done! Run `npm run build` to build your site or `npm run serve` to see it live."
+  );
 };
 
 setup();

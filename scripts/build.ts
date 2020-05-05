@@ -5,7 +5,7 @@ import got from "got";
 
 const build = async () => {
   const baseUrl: string = JSON.parse(
-    (await fs.readFile(join(".", "package-example.json"))).toString()
+    (await fs.readFile(join(".", "package.json"))).toString()
   ).bulwark.apiUrl;
 
   const episodes = (

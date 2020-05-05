@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/bulwarkfm/staart-static#readme",
   "dependencies": {
-    "@staart/site": "^3.0.0-beta.3"
+    "@staart/site": "^3.0.0-beta.5"
   },
   "@staart/site": {
     "title": "Cofuturology",

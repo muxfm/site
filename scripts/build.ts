@@ -19,7 +19,6 @@ const build = async () => {
       ? episode.description[1]
       : episode.description["!"];
     const date = new Date(episode.pubDate).toISOString();
-    await fs.mkdir(join(".", "content", "episodes"), { recursive: true });
     await fs.writeFile(join(".", "content", "episodes"), "");
   }
 };

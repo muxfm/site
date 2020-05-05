@@ -29,18 +29,18 @@
     "inquirer": "^7.1.0"
   },
   "@staart/site": {
-    "title": "Cofuturology",
+    "title": "PODCAST_NAME",
     "listSubpages": true,
     "ignoreHomeSubpages": true,
     "theme": {
-      "headerBackgroundColor": "#ffe600",
+      "headerBackgroundColor": "#7ed6df",
       "headerTextColor": "#000000",
-      "textColor": "#372500",
+      "textColor": "#002024",
       "linkColor": "#000000",
-      "buttonBackgroundColor": "#8e44ad",
-      "buttonBackgroundColorLight": "#f1c40f",
-      "buttonTextColor": "#ffffff",
-      "doodleFillColor": "#8e44ad"
+      "buttonBackgroundColor": "#f9ca24",
+      "buttonBackgroundColorLight": "#f6e58d",
+      "buttonTextColor": "#000000",
+      "doodleFillColor": "#f9ca24"
     },
     "navbar": [
       "<a href='/episodes'>Episodes</a>",
@@ -55,17 +55,16 @@
           "padding": "5vh 0 10vh 0"
         },
         "illustration": "dancing",
-        "title": "Cofuturology is available wherever you listen to podcasts.",
+        "title": "PODCAST_NAME is available wherever you listen to podcasts.",
         "ctaText": "Listen now →",
-        "ctaLink": "#"
+        "ctaLink": "/listen"
       }
     ],
     "footer": {
-      "text": "Hosted by Dr. Jeffrey White and Anand Chowdhary",
+      "text": "Hosted by AUTHOR_NAME",
       "links": [
-        "<a href='https://github.com/AnandChowdhary/cofuturology'>GitHub</a>",
-        "<a href='https://github.com/AnandChowdhary/cofuturology'>RSS</a>",
-        "<a href='https://github.com/AnandChowdhary/cofuturology'>JSON</a>"
+        "<a href='#'>RSS</a>",
+        "<a href='#'>API</a>"
       ]
     }
   }

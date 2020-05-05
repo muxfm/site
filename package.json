@@ -64,8 +64,8 @@
     "footer": {
       "text": "Hosted by AUTHOR_NAME",
       "links": [
-        "<a href='#'>RSS</a>",
-        "<a href='#'>API</a>"
+        "<a href='RSS_URL'>RSS</a>",
+        "<a href='API_URL'>API</a>"
       ]
     }
   }

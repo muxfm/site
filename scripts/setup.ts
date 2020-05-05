@@ -20,22 +20,19 @@ const setup = async () => {
   const { metaUrl }: { metaUrl: string } = await prompt([
     {
       name: "metaUrl",
-      message: "Meta JSON URL",
+      message: "Glue API dirctory endpoint",
+      default: "https://bulwarkfm.github.io/glue/public",
     },
   ]);
   console.log("Fetching...");
-  const { body }: { body: Feed } = await got.get(
-    metaUrl ||
-      "https://raw.githubusercontent.com/bulwarkfm/glue/gh-pages/public/meta.json",
-    {
-      responseType: "json",
-    }
-  );
+  const { body }: { body: Feed } = await got.get(`${metaUrl}/meta.json`, {
+    responseType: "json",
+  });
   if (!body.title || !body.author) throw new Error("Unable to parse JSON URL");
+
   const pkg: any = JSON.parse(
     (await fs.readFile(join(".", "package.json"))).toString()
   );
-
   pkg.scripts = pkg.scripts || {};
   delete pkg.scripts.setup;
   delete pkg.scripts.demo;
@@ -48,6 +45,9 @@ const setup = async () => {
   delete pkg.keywords;
   delete pkg.bugs;
   delete pkg.homepage;
+
+  pkg.bulwark = pkg.bulwark || {};
+  pkg.bulwark.apiUrl = metaUrl;
 
   const {
     githubUrl,
@@ -70,6 +70,8 @@ const setup = async () => {
     JSON.stringify(pkg, null, 2)
       .replace(/PODCAST_NAME/g, body.title)
       .replace(/AUTHOR_NAME/g, body.author)
+      .replace(/RSS_URL/g, `${metaUrl}/feed.xml`)
+      .replace(/API_URL/g, `${metaUrl}/meta.xml`)
       .replace(/\/episodes/g, `${baseUrl}/episodes`)
       .replace(/\/listen/g, `${baseUrl}/listen`)
   );

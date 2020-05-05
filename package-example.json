@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Generate your podcast's static site",
   "scripts": {
-    "build": "site build",
-    "watch": "site watch",
-    "serve": "site serve",
+    "build": "ts-node scripts/build.ts && site build",
+    "watch": "ts-node scripts/build.ts && site watch",
+    "serve": "ts-node scripts/build.ts && site serve",
     "start": "npm run serve"
   },
   "author": "Anand Chowdhary <mail@anandchowdhary.com>",

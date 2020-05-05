@@ -49,11 +49,19 @@ const setup = async () => {
   delete pkg.bugs;
   delete pkg.homepage;
 
-  const { githubUrl }: { githubUrl?: string } = await prompt([
+  const {
+    githubUrl,
+    baseUrl,
+  }: { githubUrl?: string; baseUrl: string } = await prompt([
     {
       name: "githubUrl",
       message:
         "Is your podcast open source? If yes, enter the repositor URL here, otherwise press enter to skip",
+    },
+    {
+      name: "baseUrl",
+      message: "Enter the base URL for your site without trailing slash",
+      default: "",
     },
   ]);
 
@@ -62,6 +70,8 @@ const setup = async () => {
     JSON.stringify(pkg, null, 2)
       .replace(/PODCAST_NAME/g, body.title)
       .replace(/AUTHOR_NAME/g, body.author)
+      .replace(/\/episodes/g, `${baseUrl}/episodes`)
+      .replace(/\/listen/g, `${baseUrl}/listen`)
   );
   console.log(
     "Done! Run `npm run build` to build your site or `npm run serve` to see it live."

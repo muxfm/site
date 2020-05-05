@@ -33,8 +33,8 @@
       "doodleFillColor": "#f9ca24"
     },
     "navbar": [
-      "<a href='/episodes'>Episodes</a>",
-      "<a href='/listen'>How to Listen</a>"
+      "<a href='https://bulwarkfm.github.io/static-site/episodes'>Episodes</a>",
+      "<a href='https://bulwarkfm.github.io/static-site/listen'>How to Listen</a>"
     ],
     "preFooter": [
       {
@@ -47,15 +47,12 @@
         "illustration": "dancing",
         "title": "Couples Therapy with Candice and Casey is available wherever you listen to podcasts.",
         "ctaText": "Listen now →",
-        "ctaLink": "/listen"
+        "ctaLink": "https://bulwarkfm.github.io/static-site/listen"
       }
     ],
     "footer": {
       "text": "Hosted by Casey Neistat and Candice Pool",
-      "links": [
-        "<a href='#'>RSS</a>",
-        "<a href='#'>API</a>"
-      ]
+      "links": ["<a href='#'>RSS</a>", "<a href='#'>API</a>"]
     }
   }
 }

@@ -27,6 +27,11 @@
   "dependencies": {
     "@staart/site": "^3.0.0-beta.5"
   },
+  "devDependencies": {
+    "@types/inquirer": "^6.5.0",
+    "got": "^11.1.0",
+    "inquirer": "^7.1.0"
+  },
   "@staart/site": {
     "title": "Cofuturology",
     "listSubpages": true,
@@ -67,10 +72,5 @@
         "<a href='https://github.com/AnandChowdhary/cofuturology'>JSON</a>"
       ]
     }
-  },
-  "devDependencies": {
-    "@types/inquirer": "^6.5.0",
-    "got": "^11.1.0",
-    "inquirer": "^7.1.0"
   }
 }

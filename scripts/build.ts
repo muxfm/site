@@ -20,7 +20,7 @@ const build = async () => {
       : episode.description["!"];
     const date = new Date(episode.pubDate).toISOString();
     await fs.writeFile(
-      join(".", "content", "episodes", `${title.md}`),
+      join(".", "content", "episodes", `${title}.md`),
       `# ${title}\n\n${description}`
     );
   }

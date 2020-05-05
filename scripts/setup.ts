@@ -38,6 +38,7 @@ const setup = async () => {
 
   pkg.scripts = pkg.scripts || {};
   delete pkg.scripts.setup;
+  delete pkg.scripts.demo;
   pkg.scripts.build = "site build";
   pkg.scripts.watch = "site watch";
   pkg.scripts.serve = "site serve";

@@ -4,6 +4,7 @@
   "description": "Generate your podcast's static site",
   "scripts": {
     "setup": "npx ts-node scripts/setup.ts",
+    "demo": "mkdirp public && cp -r src public && cp -r content public && cp package-example.json public/package.json && cd public && npm i && npm run build",
     "build": "echo 'Run `npm run setup` first'",
     "watch": "echo 'Run `npm run setup` first'",
     "serve": "echo 'Run `npm run setup` first'",

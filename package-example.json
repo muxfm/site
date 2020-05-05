@@ -52,7 +52,13 @@
     ],
     "footer": {
       "text": "Hosted by Casey Neistat and Candice Pool",
-      "links": ["<a href='#'>RSS</a>", "<a href='#'>API</a>"]
+      "links": [
+        "<a href='https://bulwarkfm.github.io/glue/public/feed.xml'>RSS</a>",
+        "<a href='https://bulwarkfm.github.io/glue/public/meta.xml'>API</a>"
+      ]
     }
+  },
+  "bulwark": {
+    "apiUrl": "https://bulwarkfm.github.io/glue/public"
   }
 }

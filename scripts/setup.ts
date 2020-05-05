@@ -36,9 +36,9 @@ const setup = async () => {
   pkg.scripts = pkg.scripts || {};
   delete pkg.scripts.setup;
   delete pkg.scripts.demo;
-  pkg.scripts.build = "site build";
-  pkg.scripts.watch = "site watch";
-  pkg.scripts.serve = "site serve";
+  pkg.scripts.build = "ts-node scripts/build.ts && site build";
+  pkg.scripts.watch = "ts-node scripts/build.ts && site watch";
+  pkg.scripts.serve = "ts-node scripts/build.ts && site serve";
   pkg.scripts.start = "npm run serve";
 
   delete pkg.repository;

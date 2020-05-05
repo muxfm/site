@@ -70,6 +70,7 @@
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0",
+    "got": "^11.1.0",
     "inquirer": "^7.1.0"
   }
 }

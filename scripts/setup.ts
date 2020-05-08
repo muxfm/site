@@ -1,7 +1,9 @@
 import { prompt } from "inquirer";
 import { promises as fs } from "fs";
 import { join } from "path";
+import { config } from "dotenv";
 import got from "got";
+config();
 
 interface Feed {
   "itunes:category": string[];
@@ -31,7 +33,14 @@ const setup = async () => {
   if (!body.title || !body.author) throw new Error("Unable to parse JSON URL");
 
   const pkg: any = JSON.parse(
-    (await fs.readFile(join(".", "package.json"))).toString()
+    (
+      await fs.readFile(
+        join(
+          ".",
+          `package${process.env.TEST_SITE === "test" ? "-example" : ""}.json`
+        )
+      )
+    ).toString()
   );
   pkg.scripts = pkg.scripts || {};
   delete pkg.scripts.setup;
@@ -66,7 +75,10 @@ const setup = async () => {
   ]);
 
   await fs.writeFile(
-    join(".", "package-example.json"),
+    join(
+      ".",
+      `package${process.env.TEST_SITE === "test" ? "-example" : ""}.json`
+    ),
     JSON.stringify(pkg, null, 2)
       .replace(/PODCAST_NAME/g, body.title)
       .replace(/AUTHOR_NAME/g, body.author)

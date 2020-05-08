@@ -16,10 +16,11 @@ const build = async () => {
   for await (const episode of episodes) {
     const title = episode.title;
     const description = episode.description;
+    const urlParts = episode.link.split("/");
     console.log("Generate page for", title);
     const date = new Date(episode.pubDate).toISOString();
     await fs.writeFile(
-      join(".", "content", "episodes", `${title}.md`),
+      join(".", "content", "episodes", `${urlParts[urlParts.length - 1]}.md`),
       `---\ntitle: "${title}"\nlayout: page\n---\n\n# ${title}\n\n${description}`
     );
   }

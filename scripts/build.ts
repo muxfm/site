@@ -5,14 +5,7 @@ import got from "got";
 
 const build = async () => {
   const baseUrl: string = JSON.parse(
-    (
-      await fs.readFile(
-        join(
-          ".",
-          `package${process.env.TEST_SITE === "test" ? "-example" : ""}.json`
-        )
-      )
-    ).toString()
+    (await fs.readFile(join(".", "package.json"))).toString()
   ).bulwark.apiUrl;
 
   const episodes = (
@@ -21,10 +14,9 @@ const build = async () => {
     })
   ).body;
   for await (const episode of episodes) {
-    const title = episode.title["!"];
-    const description = Array.isArray(episode.description)
-      ? episode.description[1]
-      : episode.description["!"];
+    const title = episode.title;
+    const description = episode.description;
+    console.log("Generate page for", title);
     const date = new Date(episode.pubDate).toISOString();
     await fs.writeFile(
       join(".", "content", "episodes", `${title}.md`),

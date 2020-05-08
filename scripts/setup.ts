@@ -23,7 +23,7 @@ const setup = async () => {
     {
       name: "metaUrl",
       message: "Glue API dirctory endpoint",
-      default: "https://bulwarkfm.github.io/glue/public",
+      default: "https://bulwarkfm.github.io/glue",
     },
   ]);
   console.log("Fetching...");

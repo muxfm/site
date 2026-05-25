@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bulwarkfm/staart-static.git"
+    "url": "git+https://github.com/muxfm/site.git"
   },
   "keywords": [],
   "author": "Anand Chowdhary <mail@anandchowdhary.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bulwarkfm/staart-static/issues"
+    "url": "https://github.com/muxfm/site/issues"
   },
-  "homepage": "https://github.com/bulwarkfm/staart-static#readme",
+  "homepage": "https://github.com/muxfm/site#readme",
   "dependencies": {
     "@staart/site": "^3.0.0-beta.6"
   },
